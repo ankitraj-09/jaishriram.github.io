@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali Quiz</title>
+
+    <!-- Css Files -->
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./main.css">
+    <!-- Css Files -->
+
+    <!-- JQuery -->
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+    <!-- JQuery -->
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="row py-3">
+            <div class="col-8">
+                <h3 class="headerText">Ramayana Trivia</h3>
+            </div>
+            <div class="col-4">
+                <a class="btn button" href="./index.html">← Back</a>
+            </div>
+        </div>
+        <!-- Quiz Box -->
+        <div class="quiz">
+
+            <!-- Score & Timer -->
+            <div class="row justify-content-center my-5">
+                <div class="col-6" style="color: orangered; font-size: x-large; font-family: MV Boli;">Score : <span
+                        id="score">0</span></div>
+                <div class="col-6 text-center">
+                    <div class="btn btn-danger" id="timer">Timer</div>
+                </div>
+            </div>
+            <!-- Quiz Question -->
+            <div class="row my-2">
+                <div class="col-1 pl-2" style="color: #45A29E;">Q.<span id="questionNum">1</span></div>
+                <div class="col-11 pl-3">
+                    <span id="questionText">The word “Diwali” originated from the term “dipavali” in Sanskrit. What does
+                        it literally mean?</span>
+                </div>
+            </div>
+            <!-- Quiz Options -->
+            <div class="row m-3">
+                <ol id="orderList" style="color: #45A29E;">
+                    <li class="listOptions my-3">Row of lights</li>
+                    <li class="listOptions my-3">Colourful lights</li>
+                    <li class="listOptions my-3">God of lights</li>
+                    <li class="listOptions my-3">Lighting festival</li>
+                </ol>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="row my-3">
+                <div class="col-6 text-center">
+                    <button class="btn button" id="submitBtn" data-toggle="modal"
+                        data-target="#exampleModalCenter">Submit</button>
+                </div>
+                <div class="col-6 text-center">
+                    <button class="btn button" id="nextBtn">Next →</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- Quiz Box -->
+
+        <!-- Modal Box -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Quiz is submitted</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a type="button" class="btn button" href="./quiz.html">
+                            Start Quiz
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Box -->
+
+    </div>
+    <!-- Container -->
+
+    <!-- Js Files -->
+    <script src="./jquery.js"></script>
+    <script src="./bootstrap.bundle.js"></script>
+    <script src="./quiz.js"></script>
+    <!-- Js Files -->
+</body>
+
+</html>
