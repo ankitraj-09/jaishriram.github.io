@@ -106,7 +106,7 @@ let questionNum = 1;
 let totalQue = 5;
 let marks = 2;
 let score = 0;
-const time = 10;
+const time = 0;
 /* Colors */
 const color1 = "red";
 const color2 = "green";
@@ -117,11 +117,13 @@ const color4 = "white";
 // ==== Functions ==== //
 
 /* To start game */
-startQuiz();
+window.onload = function (){
+    startQuiz();
+}
 
 /* Starting Game Function */
 function startQuiz() {
-    const x = Math.floor(Math.random() * 4);
+    const x = Math.floor(Math.random() * 3);
     const set = sets[x];
     loadQuiz(set);
 }
