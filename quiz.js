@@ -181,7 +181,13 @@ function loadQuiz(set) {
             this.style.backgroundColor = color2;
             score += 1;
             scoreText.textContent = marks * score;
-            modalBody.textContent = `Your Score is ${scoreText.textContent} out of 10`;
+            if(score == 5){
+                modalBody.textContent = `Awesome! Your Score is ${scoreText.textContent} out of 10`;
+            }else if(score == 4){
+                modalBody.textContent = `Good! Your Score is ${scoreText.textContent} out of 10`;
+            }else{
+                modalBody.textContent = `Your Score is ${scoreText.textContent} out of 10`;
+            }
 
             listOptions.forEach(list => {
                 list.removeEventListener("click", checkAnswer);
