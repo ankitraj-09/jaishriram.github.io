@@ -106,7 +106,7 @@ let questionNum = 1;
 let totalQue = 5;
 let marks = 2;
 let score = 0;
-const time = 0;
+const time = 10;
 /* Colors */
 const color1 = "red";
 const color2 = "green";
